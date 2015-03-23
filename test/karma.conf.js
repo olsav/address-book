@@ -11,8 +11,11 @@ module.exports = function (config) {
       'vendor/assets/javascripts/angular-ui/angular-ui-bootstrap.js',
       'vendor/assets/javascripts/angular-ui/angular-ui-router.js',
 
-      'lib/assets/javascripts/{*,**/*}.js',
-      'app/assets/javascripts/{*,**/*}.js',
+      'lib/assets/javascripts/*/*.js',
+      'lib/assets/javascripts/*/**/*.js',
+      'app/assets/javascripts/main.js',
+      'app/assets/javascripts/*/*.js',
+      'app/assets/javascripts/*/**/*.js',
 
       'test/unit/**/*.js'
     ],

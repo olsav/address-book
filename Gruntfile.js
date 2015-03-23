@@ -40,10 +40,9 @@ module.exports = function (grunt) {
         src: [
           '<%= vendor.javascripts %>',
 
-          'app/assets/javascripts/main.js',
-
           'lib/assets/javascripts/*/*.js',
           'lib/assets/javascripts/*/**/*.js',
+          'app/assets/javascripts/main.js',
           'app/assets/javascripts/*/*.js',
           'app/assets/javascripts/*/**/*.js'
         ],
