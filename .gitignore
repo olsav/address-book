@@ -1,0 +1,10 @@
+/.idea/
+/coverage_reports/
+/node_modules/
+
+/public/assets/
+
+*.iml
+*.ipr
+*.iws
+*.log

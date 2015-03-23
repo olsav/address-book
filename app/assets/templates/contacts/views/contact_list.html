@@ -1,0 +1,35 @@
+<div class="contact-list" ng-init="initialize()">
+  <ul class="list-group">
+    <li class="contact-item text-center" ng-if="contacts.length === 0">
+      <div class="wrapper-padding">
+        There are no contacts yet, create <a class="btn btn-default" ui-sref="contacts.create()"><i class="fa fa-plus wrapper-margin"></i>New</a> contact.
+      </div>
+    </li>
+
+    <li class="contact-item clearfix" ng-repeat="contact in contacts">
+      <div class="col-sm-2">
+        <div class="avatar-wrapper">
+          <div class="avatar" style="color: {{ contact.avatar.color }}; background: {{ contact.avatar.background }};">
+            <span>{{ contact.name.substr(0, 1) }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="wrapper-padding">
+          <h2>{{ contact.name }}</h2>
+
+          <ul class="list-inline">
+            <li ng-if="contact.phone"><i class="fa fa-fw fa-lg fa-phone"></i> {{ contact.phone }}</li>
+            <li ng-if="contact.group"><i class="fa fa-fw fa-lg fa-users"></i> {{ contact.group }}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="wrapper-padding">
+          <a class="btn btn-default" ui-sref="contacts.edit({ id: contact.id })"><i class="fa fa-edit wrapper-margin"></i>Edit</a>
+          <button class="btn btn-danger" type="button" ng-click="remove(contact)"><i class="fa fa-remove wrapper-margin"></i>Remove</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

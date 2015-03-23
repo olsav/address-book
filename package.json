@@ -1,0 +1,35 @@
+{
+  "name": "addressBook",
+  "version": "0.0.1",
+
+  "scripts": {
+    "test": "karma start test/karma.conf.js"
+  },
+
+  "devDependencies": {
+    "grunt": "*",
+    "karma": "*",
+
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-template": "*",
+
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-concat": "*",
+
+    "less-plugin-autoprefix": "*",
+    "less-plugin-clean-css": "*",
+
+    "karma-jasmine": "*",
+    "karma-coverage": "*",
+    "karma-ie-launcher": "*",
+    "karma-chrome-launcher": "*",
+    "karma-firefox-launcher": "*"
+  },
+
+  "private": true
+}

@@ -1,0 +1,11 @@
+* text=auto eol=crlf
+
+# Fonts
+*.eot binary
+*.ttf binary
+*.woff binary
+
+# Images
+*.gif binary
+*.jpg binary
+*.png binary
