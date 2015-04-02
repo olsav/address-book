@@ -1,4 +1,4 @@
-angular.module('appContacts', ['appCommon']).config([
+angular.module('appContacts', ['appCommon', 'spinner']).config([
   '$stateProvider', function ($stateProvider) {
     'use strict';
 

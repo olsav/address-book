@@ -6,7 +6,7 @@
       </div>
     </li>
 
-    <li class="contact-item clearfix" ng-repeat="contact in contacts">
+    <li class="contact-item clearfix" ng-repeat="contact in contacts | filter:searchContacts">
       <div class="col-sm-2">
         <div class="avatar-wrapper">
           <div class="avatar" style="color: {{ contact.avatar.color }}; background: {{ contact.avatar.background }};">
@@ -32,4 +32,5 @@
       </div>
     </li>
   </ul>
+  <span us-spinner="{radius:30, width:8, length: 16}"></span>
 </div>
