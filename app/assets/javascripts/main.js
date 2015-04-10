@@ -1,5 +1,5 @@
 angular.module('appMain', [
   'dashboard',
   'appContacts',
-  'creatives'
+  'products'
 ]);
