@@ -1,13 +1,16 @@
-<div class="well clearfix">
-  <div class="form-inline btn-toolbar pull-left">
-    <span class="text-larger">Search by name </span>
-    <input class="form-control" ng-model="searchContacts.name" />
-  </div>
+<div ui-view="breadcrumbs" class="row"></div>
+<div class="row">
+  <div class="well clearfix">
+    <div class="form-inline btn-toolbar pull-left">
+      <span class="text-larger">Search by name </span>
+      <input class="form-control" ng-model="searchContacts.name" />
+    </div>
 
-  <div class="btn-toolbar pull-right">
-    <div class="btn-group">
-      <a class="btn btn-default" ui-sref="contacts.create()"><i class="fa fa-plus wrapper-margin"></i>New</a>
+    <div class="btn-toolbar pull-right">
+      <div class="btn-group">
+        <a class="btn btn-default" ui-sref="contacts.create()"><i class="fa fa-plus wrapper-margin"></i>New</a>
+      </div>
     </div>
   </div>
+  <div ui-view="list"></div>
 </div>
-<div ui-view="list"></div>

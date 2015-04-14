@@ -1,0 +1,10 @@
+<div ui-view="breadcrumbs" class="row"></div>
+<div class="row">
+  <div ui-view="sidebar" class="col-sm-4"></div>
+  <div class="col-sm-8">
+    <h2>Product view</h2>
+    <div ng-init="initialize()">
+      {{product | json}}
+    </div>
+  </div>
+</div>

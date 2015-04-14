@@ -1,0 +1,13 @@
+<h2>{{title}}</h2>
+<div>
+  <ul class="list-group products">
+    <li class="text-center thumbnail" ng-if="products.length === 0">
+      There are no products yet.
+    </li>
+
+    <li class="thumbnail" ng-repeat="product in products">
+      <a ui-sref="products.view({ id: product.id })">{{product.name}}</a>
+      <p>{{product.description}}</p>
+    </li>
+  </ul>
+</div>

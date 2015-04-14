@@ -1,4 +1,5 @@
 angular.module('appMain', [
   'dashboard',
-  'appContacts'
+  'appContacts',
+  'products'
 ]);
