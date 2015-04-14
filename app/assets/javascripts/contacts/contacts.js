@@ -1,5 +1,5 @@
-angular.module('appContacts', ['appCommon', 'spinner']).config([
-  '$stateProvider', function ($stateProvider) {
+angular.module('appContacts', ['appCommon', 'dbResource']).config([
+  '$stateProvider', 'BREADCRUMBS_TEMPLATE', function ($stateProvider, BREADCRUMBS_TEMPLATE) {
     'use strict';
 
     $stateProvider.state('contacts', {
@@ -18,7 +18,7 @@ angular.module('appContacts', ['appCommon', 'spinner']).config([
       },
       views: {
         'breadcrumbs': {
-          templateUrl: 'assets/templates/common/breadcrumbs.tpl.html'
+          templateUrl: BREADCRUMBS_TEMPLATE
         },
         'list': {
           templateUrl: 'assets/templates/contacts/views/contact_list.html',
@@ -34,7 +34,7 @@ angular.module('appContacts', ['appCommon', 'spinner']).config([
       },
       views: {
         'breadcrumbs@contacts.create': {
-          templateUrl: 'assets/templates/common/breadcrumbs.tpl.html'
+          templateUrl: BREADCRUMBS_TEMPLATE
         },
         '@': {
           templateUrl: 'assets/templates/contacts/views/contact_form.html',
@@ -50,7 +50,7 @@ angular.module('appContacts', ['appCommon', 'spinner']).config([
       },
       views: {
         'breadcrumbs@contacts.edit': {
-          templateUrl: 'assets/templates/common/breadcrumbs.tpl.html'
+          templateUrl: BREADCRUMBS_TEMPLATE
         },
         '@': {
           templateUrl: 'assets/templates/contacts/views/contact_form.html',

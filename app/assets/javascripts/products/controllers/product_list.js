@@ -1,8 +1,8 @@
 angular.module('products').controller('productList', [
-  '$scope', 'productsResource', function($scope, productsResource) {
+  '$scope', 'dbResource', function($scope, dbResource) {
     'use strict';
 
     $scope.title = 'Product list';
-    $scope.products = productsResource.query();
+    $scope.products = dbResource.query({'table': 'products'});
   }
 ]);

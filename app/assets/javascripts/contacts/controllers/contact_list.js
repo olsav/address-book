@@ -3,11 +3,11 @@ angular.module('appContacts').controller('ContactList', [
     'use strict';
 
     angular.extend($scope, $state.$current.locals.globals, {
-      Contact: $injector.get('Contact')
+      dbResource: $injector.get('dbResource')
     });
 
     $scope.sync = function () {
-      $scope.contacts = $scope.Contact.query();
+      $scope.contacts = $scope.dbResource.query({'table': 'contacts'});
     };
 
     $scope.initialize = function () {

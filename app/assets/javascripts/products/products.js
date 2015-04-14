@@ -1,5 +1,5 @@
-angular.module('products', ['appCommon', 'angularUtils.directives.uiBreadcrumbs']).config([
-  '$stateProvider', function($stateProvider) {
+angular.module('products', ['appCommon', 'dbResource']).config([
+  '$stateProvider', 'BREADCRUMBS_TEMPLATE', function($stateProvider, BREADCRUMBS_TEMPLATE) {
     'use strict';
 
     $stateProvider.state('products', {
@@ -18,7 +18,7 @@ angular.module('products', ['appCommon', 'angularUtils.directives.uiBreadcrumbs'
       },
       views: {
         'breadcrumbs': {
-          templateUrl: 'assets/templates/common/breadcrumbs.tpl.html'
+          templateUrl: BREADCRUMBS_TEMPLATE
         },
         'sidebar': {
           templateUrl: 'assets/templates/products/product_sidebar.html',
@@ -38,7 +38,7 @@ angular.module('products', ['appCommon', 'angularUtils.directives.uiBreadcrumbs'
       },
       views: {
         'breadcrumbs@products.view': {
-          templateUrl: 'assets/templates/common/breadcrumbs.tpl.html'
+          templateUrl: BREADCRUMBS_TEMPLATE
         },
         'sidebar@products.view': {
           templateUrl: 'assets/templates/products/product_sidebar.html',

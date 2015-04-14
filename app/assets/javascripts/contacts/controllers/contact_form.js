@@ -3,14 +3,17 @@ angular.module('appContacts').controller('ContactForm', [
     'use strict';
 
     angular.extend($scope, $state.$current.locals.globals, {
-      Contact: $injector.get('Contact')
+      dbResource: $injector.get('dbResource')
     });
 
     $scope.sync = function () {
       if (angular.isDefined($scope.$stateParams.id)) {
-        $scope.contact = $scope.Contact.get($scope.$stateParams);
+        $scope.contact = $scope.dbResource.get({
+          'table': 'contacts',
+          'id': $scope.$stateParams.id
+        });
       } else {
-        $scope.contact = new $scope.Contact({
+        $scope.contact = new $scope.dbResource({
           // Default values are here
         });
       }
