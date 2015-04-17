@@ -1,0 +1,9 @@
+<div class="input-group input-count">
+  <span class="input-group-btn">
+    <button class="btn btn-default" ng-disabled="value<=min" ng-click="value=value-1">-</button>
+  </span>
+  <input class="form-control count-value" ng-model="value" placeholder="_" ui-mask="9" ng-change="setValue()"/>
+  <span class="input-group-btn">
+    <button class="btn btn-default" ng-disabled="value>=max" ng-click="value=value+1">+</button>
+  </span>
+</div>

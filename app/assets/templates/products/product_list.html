@@ -1,13 +1,36 @@
 <h2>{{title}}</h2>
-<div>
-  <ul class="list-group products">
-    <li class="text-center thumbnail" ng-if="products.length === 0">
-      There are no products yet.
-    </li>
-
-    <li class="thumbnail" ng-repeat="product in products">
-      <a ui-sref="products.view({ id: product.id })">{{product.name}}</a>
-      <p>{{product.description}}</p>
-    </li>
-  </ul>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="panel panel-default" ng-repeat="product in (products|orderBy:'title')">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-xs-5 product-pricing">
+            <div>
+              <div class="row text-right wrapper-padding">
+                <span class="price price-main">{{product.price}}</span>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <count model="product.count"></count>
+                </div>
+                <div class="col-xs-3">
+                  <button class="btn-primary btn"
+                          ng-click="add2cart(product.count, product.id)"
+                      ><i class="icon icon-add2cart"></i> Add</button>
+                </div>
+                <div class="col-xs-3"><button class="btn-warning btn"
+                                              ng-click="add2cart(product.count, product.id, true)"
+                    >Buy now</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-xs-offset-1 product-description">
+            <h3>{{product.title}}</h3>
+            <div ng-bind-html="processHtml(product.description)"></div>
+          </div>
+        </div>
+        <span class="divider"></span>
+      </div>
+    </div>
+  </div>
 </div>

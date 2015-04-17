@@ -10,6 +10,7 @@ module.exports = function (grunt) {
         'vendor/assets/javascripts/angular/angular-resource.js',
         'vendor/assets/javascripts/angular/angular-animate.js',
         'vendor/assets/javascripts/angular/angular-touch.js',
+        'vendor/assets/javascripts/angular-local-storage/angular-local-storage.js',
         'vendor/assets/javascripts/angular-ui/angular-ui-bootstrap.js',
         'vendor/assets/javascripts/angular-ui/angular-ui-router.js',
         'vendor/assets/javascripts/spinner/spin.js',

@@ -1,0 +1,26 @@
+.count-value {
+  min-width: 35px;
+}
+
+.price{
+  position: relative;
+  font-family: sans-serif;
+  font-weight: 600;
+
+  line-height: 1em;
+  letter-spacing: -3px;
+
+  &:before{
+    content: '$';
+    position: absolute;
+    left: -.5em;
+    top: .02em;
+    font-size: .5em;
+  }
+  &.price-main{
+    font-size: 4.1em;
+    margin-left: -100px;
+    top: 10px;
+    right: -7px;
+  }
+}
