@@ -12,7 +12,16 @@ angular.module('products').controller('productView', [
         $scope.product = $scope.dbResource.get({
           'table': 'products',
           'id': $scope.$stateParams.id
+        },
+        function(product) {
+          if (product.images.length > 0) {
+            $scope.mainImageUrl = product.images[0];
+          }
         });
+
+        $scope.setImage = function(imageUrl) {
+          $scope.mainImageUrl = imageUrl;
+        };
       } else {
         //$state.go('products.list');
       }

@@ -1,10 +1,44 @@
 <div ui-view="breadcrumbs" class="row"></div>
-<div class="row">
+<div class="row product">
   <div ui-view="sidebar" class="col-sm-4"></div>
   <div class="col-sm-8">
-    <h2>Product view</h2>
+    <h2>{{product.title}}</h2>
     <div ng-init="initialize()">
-      {{product | json}}
+      <div class="row">
+        <div class="col-xs-4">
+          <img class="main-image" ng-if="mainImageUrl" ng-src="{{mainImageUrl}}" />
+        </div>
+        <div class="col-xs-7">
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="wrapper-padding">
+                <span class="price price-main">{{product.price}}</span>
+              </div>
+              <div class="wrapper-padding">
+              <button class="btn-warning btn">Buy</button>
+                </div>
+            </div>
+            <div class="col-xs-7">
+              {{product.description}}
+            </div>
+          </div>
+          <div ng-if="product.propertiesArray.length > 0" class="row">
+            <h3>Specs</h3>
+            <ul class="product-specs">
+              <li ng-repeat="spec in product.propertiesArray">
+                {{spec}}
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <ul class="product-thumbs list-inline">
+              <li ng-repeat="img in product.images">
+                <img ng-src="{{img}}" ng-click="setImage(img)">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
